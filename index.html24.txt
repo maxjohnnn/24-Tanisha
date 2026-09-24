@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Free Telegram Channel</title>
+
+  <!-- ==============================
+       META PIXEL
+       Apna Pixel code yahan paste karo
+       ============================== -->
+
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f3f7fc;
+      color: #111827;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 520px;
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 18px 15px 20px;
+      background: #ffffff;
+    }
+
+    /* LOGO */
+
+    .logo {
+      display: block;
+      width: 78px;
+      height: 78px;
+      margin: 5px auto 12px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #e5e7eb;
+    }
+
+    /* TITLE */
+
+    .title {
+      text-align: center;
+      font-size: 25px;
+      line-height: 1.25;
+      font-weight: 800;
+      color: #16429b;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #64748b;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    /* RATING */
+
+    .rating {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .stars {
+      color: #f59e0b;
+      font-size: 24px;
+      letter-spacing: 2px;
+    }
+
+    .rating-text {
+      color: #475569;
+      font-size: 13px;
+      margin-top: 3px;
+    }
+
+    /* TELEGRAM BUTTON */
+
+    .telegram-btn {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 100%;
+      min-height: 64px;
+
+      padding: 14px 55px 14px 50px;
+
+      border-radius: 15px;
+
+      background: #1769e8;
+      color: #ffffff;
+
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 800;
+
+      box-shadow: 0 7px 18px rgba(23, 105, 232, 0.25);
+
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .telegram-btn:active {
+      transform: scale(0.98);
+    }
+
+    /* TELEGRAM ICON */
+
+    .telegram-icon {
+      position: absolute;
+      left: 17px;
+      width: 27px;
+      height: 27px;
+      fill: #ffffff;
+    }
+
+    /* RIGHT ARROW */
+
+    .arrow {
+      position: absolute;
+      right: 18px;
+
+      color: #ffffff;
+      font-size: 27px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    /* STATS */
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 9px;
+      margin-top: 16px;
+    }
+
+    .stat {
+      text-align: center;
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 13px 5px;
+    }
+
+    .stat-number {
+      color: #1558c0;
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .stat-label {
+      color: #64748b;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    /* CONTENT */
+
+    .content {
+      margin-top: 21px;
+    }
+
+    .content h2 {
+      font-size: 21px;
+      line-height: 1.35;
+      color: #111827;
+      margin-bottom: 9px;
+    }
+
+    .content h2 span {
+      color: #1769e8;
+    }
+
+    .content p {
+      color: #64748b;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* FEATURES */
+
+    .features {
+      display: grid;
+      gap: 9px;
+      margin-top: 15px;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      padding: 12px;
+
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      border-radius: 11px;
+
+      color: #1f2937;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .check {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 24px;
+      height: 24px;
+
+      flex-shrink: 0;
+
+      border-radius: 50%;
+
+      background: #dcfce7;
+      color: #15803d;
+
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    /* FOOTER */
+
+    .footer {
+      margin-top: 25px;
+      padding-top: 15px;
+
+      border-top: 1px solid #e5e7eb;
+
+      text-align: center;
+
+      color: #94a3b8;
+      font-size: 12px;
+    }
+
+    .footer a {
+      color: #1769e8;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    /* SMALL MOBILE */
+
+    @media (max-width: 360px) {
+
+      .title {
+        font-size: 22px;
+      }
+
+      .telegram-btn {
+        font-size: 17px;
+      }
+
+      .stats {
+        gap: 6px;
+      }
+
+      .stat-number {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="page">
+
+    <!-- LOGO
+         logo.png ko index.html ke same folder me rakho
+    -->
+
+    <img
+      src="logo.png"
+      class="logo"
+      alt="Telegram Channel Logo"
+    >
+
+
+    <!-- TITLE -->
+
+    <h1 class="title">
+      India's Stock Market Telegram Channel
+    </h1>
+
+    <p class="subtitle">
+      Market updates, educational insights and daily analysis
+    </p>
+
+
+    <!-- RATING -->
+
+    <div class="rating">
+
+      <div class="stars">
+        ★★★★★
+      </div>
+
+      <div class="rating-text">
+        Trusted by our community
+      </div>
+
+    </div>
+
+
+    <!-- ==========================================
+         MAIN TELEGRAM BUTTON
+
+         SIRF YE LINK APNE TELEGRAM LINK SE CHANGE KARO
+         ========================================== -->
+
+    <a
+      href="https://t.me/YOUR_CHANNEL"
+      class="telegram-btn"
+      aria-label="Join Free Telegram Channel"
+    >
+
+      <!-- Telegram icon -->
+
+      <svg
+        class="telegram-icon"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M21.7 3.3L18.6 20c-.2 1.2-.9 1.5-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.2L6 13.7l-5-1.6c-1.1-.3-1.1-1.1.2-1.6L20.6 3c.9-.3 1.7.2 1.1.3z"/>
+      </svg>
+
+      <span>
+        Join Free Telegram Channel
+      </span>
+
+      <span class="arrow">
+        →
+      </span>
+
+    </a>
+
+
+    <!-- STATS -->
+
+    <div class="stats">
+
+      <div class="stat">
+        <div class="stat-number">50K+</div>
+        <div class="stat-label">Community</div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-number">5+</div>
+        <div class="stat-label">Years</div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-number">Daily</div>
+        <div class="stat-label">Updates</div>
+      </div>
+
+    </div>
+
+
+    <!-- CONTENT -->
+
+    <section class="content">
+
+      <h2>
+        Get <span>FREE</span> Daily Market Updates
+      </h2>
+
+      <p>
+        Join our Telegram channel for educational market
+        information, analysis and regular updates.
+      </p>
+
+
+      <div class="features">
+
+        <div class="feature">
+          <span class="check">✓</span>
+          Daily market updates
+        </div>
+
+        <div class="feature">
+          <span class="check">✓</span>
+          NIFTY &amp; BANKNIFTY analysis
+        </div>
+
+        <div class="feature">
+          <span class="check">✓</span>
+          Educational market insights
+        </div>
+
+        <div class="feature">
+          <span class="check">✓</span>
+          Free Telegram community
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+      Ads managed by
+
+      <a
+        href="https://t.me/maxjohn"
+        target="_blank"
+        rel="noopener"
+      >
+        Maxjohn
+      </a>
+
+    </footer>
+
+  </main>
+
+</body>
+</html>
